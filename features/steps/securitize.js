@@ -27,20 +27,6 @@ await driver.sleep(1000);
 await pass.sendKeys(Key.ENTER);
 }); 
 
-/*
-
-When (/^Login with user: "(.*)" and password : "(.*)"$/, async function(usuario,password){
-
-var user = await driver.findElement(By.xpath("//body/div[1]/div[1]/form[1]/input[1]"))
-await user.sendKeys(usuario);
-await driver.sleep(1000);
-var pass = await driver.findElement(By.xpath("//body/div[1]/div[1]/form[1]/input[2]"))
-await pass.sendKeys(password);
-await driver.sleep(1000);
-await pass.sendKeys(Key.ENTER);
-});
-
-*/
 
 
 
@@ -70,19 +56,23 @@ Then ("Button DO-1 is disabled", async function(){
 // SECOND EXCERCISE
 
 
-When ("Up arrow is clicked & it's size increases", async function(){
+When ("Up arrow is clicked AND it's size increases", async function(){
 
     var UP = await driver.findElement(By.css("#btnIncreaseFont"));
-    var FontSize = await UP.getAttribute("font-size"); 
+    let TEXT = await driver.findElement(By.xpath("//p[@id='textFontSize']"));
+    let FontSize = await TEXT.getCssValue("font-size"); 
     await UP.click();
-    await assert.isTrue ( FontSize < await UP.getAttribute("font-size"));});
+    FontSize = await TEXT.getCssValue("font-size"); 
+    await assert.isTrue ( FontSize == "23px")});
 
-Then ("Down arrow is clicked & it's size decreases", async function(){
+Then ("Down arrow is clicked AND it's size decreases", async function(){
 
         var DOWN = await driver.findElement(By.css("#btnDecreaseFont"));
-        var FontSize = await DOWN.getAttribute("font-size"); 
+        let TEXT = await driver.findElement(By.xpath("//p[@id='textFontSize']"));
+        let FontSize = await TEXT.getCssValue("font-size"); 
         await DOWN.click();
-        await assert.isTrue ( FontSize < await DOWN.getAttribute("font-size"));});
+        FontSize = await TEXT.getCssValue("font-size");
+        await assert.isTrue ( FontSize == "20px")});
 
 
 // BONUS EXCERCISE
@@ -104,34 +94,9 @@ When (/^the colour "(.*)" is written$/, async function(color){
 
     var BG = await driver.findElement(By.css("#formToColorize"));
     console.log (await BG.getCssValue("background"));
-    await assert.isTrue (await BG.getCssValue("background") == colorname );
+    await assert.isTrue (await BG.getAttribute("style") == "background: "+colorname+";");
 
  });
  
 
 
-
-
- /*
-        Up arrow is clicked & it's size increases
-
-When ("the UP arrow is clicked", async function(){
-
-    var UP = await driver.findElement(By.css("#btnIncreaseFont"));
-    var FontSize = await UP.getAtributte("font-size") 
-    await UP.click();
-    await assert.isTrue (FontSize < await UP.getAtribute("font-size"));
-});
-Then ("the font size gets bigger", async function(){
-    var FONT = await driver.findElement(By.css("#textFontSize"));
-    await assert.isTrue ();
-});
-When ("the DOWN arrow is clicked", async function(){
-    var DOWN = await driver.findElement(By.css("#btnIncreaseFont"));
-    await DOWN.click();
-});
-Then ("the font size gets smaller", async function(){
-    var FONT = await driver.findElement(By.css("#textFontSize"));
-    await assert.isTrue ();
-});
-*/

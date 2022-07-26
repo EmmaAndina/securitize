@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js -f json:reports/cucumber_report.json",
-    "reporte": "node reportGenerator.js"
+    "report": "node reportGenerator.js"
   },
   "author": "Emmanuel Ayala",
   "license": "ISC",
