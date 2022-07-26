@@ -3,8 +3,8 @@ Feature: Assessment
 
 Background: Webpage
     When Get to "https://practis.co.il/automation/"
-    Then Login
- 
+    Then Login 
+    #Then Logins with user: "admin" and password : "admin" 
  Scenario: Do1 & Do2
     
     When Button DO-1 is clicked
@@ -12,15 +12,12 @@ Background: Webpage
     When Button DO-1 is clicked
     Then Button DO-1 is disabled
 
+Scenario: Change font size
 
- Scenario: Change Font text
-
-    When the UP arrow is clicked
-    Then the font size gets bigger
-    When the DOWN arrow is clicked
-    Then the font size gets smaller
+   When Up arrow is clicked & it's size increases
+   Then Down arrow is clicked & it's size decreases
 
  Scenario: *BONUS* Background Color
-    When a "colorname" is written
-    Then Background color changes to "colorname" 
+   When the colour "blue" is written
+   Then Background color changes to "blue"
 

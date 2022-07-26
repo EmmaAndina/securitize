@@ -8,10 +8,10 @@
     "uri": "features\\test\\securitize.feature",
     "elements": [
       {
-        "id": "assessment;entrar",
+        "id": "assessment;do1-&-do2",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "Entrar",
+        "line": 8,
+        "name": "Do1 & Do2",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -21,11 +21,11 @@
             "line": 5,
             "name": "Get to \"https://practis.co.il/automation/\"",
             "match": {
-              "location": "features\\steps\\securitize.js:13"
+              "location": "features\\steps\\securitize.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 3609000000
+              "duration": 3727000000
             }
           },
           {
@@ -34,11 +34,183 @@
             "line": 6,
             "name": "Login",
             "match": {
-              "location": "features\\steps\\securitize.js:18"
+              "location": "features\\steps\\securitize.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 2804000000
+              "duration": 3176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Button DO-1 is clicked",
+            "match": {
+              "location": "features\\steps\\securitize.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Button DO-2 is disabled",
+            "match": {
+              "location": "features\\steps\\securitize.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "Button DO-1 is clicked",
+            "match": {
+              "location": "features\\steps\\securitize.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Button DO-1 is disabled",
+            "match": {
+              "location": "features\\steps\\securitize.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "assessment;change-font-size",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Change font size",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Get to \"https://practis.co.il/automation/\"",
+            "match": {
+              "location": "features\\steps\\securitize.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Login",
+            "match": {
+              "location": "features\\steps\\securitize.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Up arrow is clicked & it's size increases",
+            "match": {
+              "location": "features\\steps\\securitize.js:73"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 65000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -false\n    +true\n\n    at World.<anonymous> (C:\\Users\\Emma\\Desktop\\Securitize\\Assessment\\features\\steps\\securitize.js:78:18)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Down arrow is clicked & it's size decreases",
+            "match": {
+              "location": "features\\steps\\securitize.js:80"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "assessment;*bonus*-background-color",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "*BONUS* Background Color",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Get to \"https://practis.co.il/automation/\"",
+            "match": {
+              "location": "features\\steps\\securitize.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1539000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Login",
+            "match": {
+              "location": "features\\steps\\securitize.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2524000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the colour \"blue\" is written",
+            "match": {
+              "location": "features\\steps\\securitize.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "Background color changes to \"blue\"",
+            "result": {
+              "status": "undefined"
             }
           }
         ]
