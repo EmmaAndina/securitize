@@ -1,0 +1,48 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Assessment",
+    "line": 1,
+    "id": "assessment",
+    "tags": [],
+    "uri": "features\\test\\securitize.feature",
+    "elements": [
+      {
+        "id": "assessment;entrar",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Entrar",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Get to \"https://practis.co.il/automation/\"",
+            "match": {
+              "location": "features\\steps\\securitize.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3609000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Login",
+            "match": {
+              "location": "features\\steps\\securitize.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2804000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
